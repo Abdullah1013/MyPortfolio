@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
+import Education from "./Education";
+import Experience from "./Experience";
 import laptopImg from "../../Assets/about.png";
 
 
@@ -33,8 +35,18 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
+        <h1 className="project-heading" style={{ paddingTop: "20px" }}>
+          Professional <strong className="purple">Experience</strong>
+        </h1>
+        <Experience />
+
+        <h1 className="project-heading" style={{ paddingTop: "20px" }}>
+          My <strong className="purple">Education</strong>
+        </h1>
+        <Education />
+
+        <h1 className="project-heading" style={{ paddingTop: "20px" }}>
+          Professional <strong className="purple">Skillset</strong>
         </h1>
 
         <Techstack />

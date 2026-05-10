@@ -1,6 +1,9 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { GiGamepad } from "react-icons/gi";
+import { MdOutlineFoodBank } from "react-icons/md";
+import { MdTravelExplore } from "react-icons/md";
 
 function AboutCard() {
   return (
@@ -11,26 +14,26 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Abdullah Khan </span>
             from <span className="purple"> Lahore, Pakistan.</span>
             <br />
-            I am Mern Stack Developer with a the knowledge of Web technologies 
-            <br />
-            I am currently pursuing my bachelor's degree in computer science, immersing myself
-            in the exploration of tech realms and acquiring knowledge in emerging technologies
-            and also done my first internship at A4H a uk based company for 6 months.
+            I am a <a href="https://www.pure-syntax.com" target="_blank" rel="noreferrer" className="purple" style={{ fontWeight: "bold", textDecoration: "none" }}>Co-Founder &amp; CTO of PureSyntax</a> and a
+            Full Stack Developer with deep expertise in Web technologies and the MERN stack.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Cooking
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
-          </ul>
+          <div className="hobby-chips">
+            <div className="hobby-chip">
+              <GiGamepad className="hobby-chip-icon" />
+              <span>Playing Games</span>
+            </div>
+            <div className="hobby-chip">
+              <MdOutlineFoodBank className="hobby-chip-icon" />
+              <span>Cooking</span>
+            </div>
+            <div className="hobby-chip">
+              <MdTravelExplore className="hobby-chip-icon" />
+              <span>Travelling</span>
+            </div>
+          </div>
 
           <p style={{ color: "rgb(155 126 172)" }}>
             "Invest effort in yourself; results will surely follow, even if it takes time!"{" "}

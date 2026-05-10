@@ -28,6 +28,21 @@ function Home() {
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
+
+              <div className="founder-badge">
+                <span className="founder-badge-inner">
+                  <span className="founder-icon">⚡</span>
+                  Co-Founder &amp; CTO of{" "}
+                  <a
+                    href="https://www.pure-syntax.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="founder-link"
+                  >
+                    PureSyntax
+                  </a>
+                </span>
+              </div>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
