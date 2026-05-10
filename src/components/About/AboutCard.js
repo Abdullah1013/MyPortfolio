@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
 import { GiGamepad } from "react-icons/gi";
 import { MdOutlineFoodBank } from "react-icons/md";
 import { MdTravelExplore } from "react-icons/md";
