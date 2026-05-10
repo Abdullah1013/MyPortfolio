@@ -257,6 +257,38 @@ button:focus {
   z-index: 10;
 }
 
+.type-wrapper {
+  padding: 50px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .type-wrapper {
+    padding: 20px 15px;
+  }
+}
+
+.home-pic-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .home-pic-col {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-pic {
+    display: block;
+    margin: 0 auto;
+    max-height: 260px !important;
+  }
+}
+
 .home-section {
   position: relative;
   z-index: 1;
@@ -271,6 +303,16 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 7rem 1rem 2rem !important;
+  }
+
+  .home-header {
+    padding-top: 40px !important;
+  }
 }
 
 .heading {
@@ -309,6 +351,24 @@ button:focus {
   position: relative;
   z-index: 10;
   pointer-events: auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .founder-badge {
+    padding-left: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .founder-badge-inner {
+    font-size: 0.82em;
+    padding: 7px 14px;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .founder-icon {
@@ -385,6 +445,18 @@ button:focus {
   border: 1px solid rgba(199, 112, 240, 0.2);
   animation: float-card 4s ease-in-out infinite;
   font-family: "Courier New", Courier, monospace;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .code-card {
+    margin: 20px auto 0;
+    font-size: 0.85em;
+  }
+
+  .code-card-body {
+    padding: 14px 16px;
+  }
 }
 
 @keyframes float-card {
@@ -729,6 +801,13 @@ button:focus {
   flex-wrap: wrap;
   gap: 12px;
   margin: 10px 0 18px 0;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .hobby-chips {
+    justify-content: center;
+  }
 }
 
 .hobby-chip {
