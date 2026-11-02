@@ -174,7 +174,7 @@ const { chromium } = require("playwright");
       .getByRole("link", { name: "Download résumé", exact: true })
       .click();
     const download = await downloadEvent;
-    assert.equal(download.suggestedFilename(), "Muhammad_Abdullah_Khan_CV.pdf");
+    assert.equal(download.suggestedFilename(), "Abdullah_Khan.pdf");
     assert.equal(await download.failure(), null);
     console.log("PASS: experience selector and actual PDF download");
 

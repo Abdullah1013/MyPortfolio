@@ -17,9 +17,9 @@ On Windows PowerShell with script execution disabled, use `npm.cmd`.
 - `src/portfolio/Portfolio.js`: active pages, navigation, project filtering, expandable contributions, and workflow illustrations.
 - `src/portfolio/portfolio.css`: design tokens, styles, animations, and responsive layouts.
 - `src/App.js`: routes. Existing `/project`, `/about`, `/learning`, and `/resume` URLs are preserved.
-- `src/Assets/Muhammad_Abdullah_khan.pdf`: current downloadable résumé.
+- `src/Assets/Abdullah_Khan.pdf`: current downloadable résumé.
 
-Main projects intentionally use text without screenshots. Early learning projects retain their images. Client projects use generic titles and omit identifying links. The attached résumé is the original supplied PDF, so review its contents separately before sharing.
+Main projects intentionally use text without screenshots. Early learning projects retain their images. Client projects use generic titles and omit identifying links. The downloadable résumé uses the same generic names for the AI hospital, social media, and affiliate marketing projects, with their descriptions and contributions preserved.
 
 The earlier components under `src/components/` and their styles remain available as reference; the new application uses `src/portfolio/`.
 

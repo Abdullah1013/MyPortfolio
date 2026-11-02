@@ -20,7 +20,7 @@ import {
   FiGlobe,
 } from "react-icons/fi";
 import portrait from "../Assets/Profile_pic.png";
-import cv from "../Assets/Muhammad_Abdullah_khan.pdf";
+import cv from "../Assets/Abdullah_Khan.pdf";
 import {
   email,
   socials,
@@ -333,7 +333,7 @@ export function HomePage() {
             </Link>
             <a
               href={cv}
-              download="Muhammad_Abdullah_Khan_CV.pdf"
+              download="Abdullah_Khan.pdf"
               className="text-link"
             >
               Download CV <FiDownload />
@@ -958,7 +958,7 @@ export function ResumePage() {
           <a
             className="button button-dark"
             href={cv}
-            download="Muhammad_Abdullah_Khan_CV.pdf"
+            download="Abdullah_Khan.pdf"
           >
             Download résumé <FiDownload />
           </a>
