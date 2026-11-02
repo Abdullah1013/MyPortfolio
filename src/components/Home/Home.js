@@ -28,17 +28,6 @@ function Home() {
               <div className="type-wrapper">
                 <Type />
               </div>
-
-              {/* desktop only */}
-              <div className="founder-badge d-none d-md-block">
-                <span className="founder-badge-inner">
-                  <span className="founder-icon">⚡</span>
-                  Co-Founder &amp; CTO of{" "}
-                  <a href="https://www.pure-syntax.com" target="_blank" rel="noreferrer" className="founder-link">
-                    PureSyntax
-                  </a>
-                </span>
-              </div>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }} className="home-pic-col">
@@ -48,16 +37,6 @@ function Home() {
                 className="img-fluid home-pic"
                 style={{ maxHeight: "450px" }}
               />
-              {/* mobile only — below image */}
-              <div className="founder-badge d-md-none" style={{ marginTop: "20px" }}>
-                <span className="founder-badge-inner">
-                  <span className="founder-icon">⚡</span>
-                  Co-Founder &amp; CTO of{" "}
-                  <a href="https://www.pure-syntax.com" target="_blank" rel="noreferrer" className="founder-link">
-                    PureSyntax
-                  </a>
-                </span>
-              </div>
             </Col>
           </Row>
         </Container>

@@ -1,16 +1,16 @@
 {
   "short_name": "Abdullah Khan",
-  "name": "Abdullah Khan | Full Stack Developer",
-  "description": "Portfolio of Abdullah Khan — Full Stack Developer & Co-Founder of PureSyntax",
+  "name": "Abdullah Khan | Full Stack & AI Developer",
+  "description": "Portfolio of Abdullah Khan — Full Stack & AI Application Developer",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#c770f0",
-  "background_color": "#0c0814"
+  "theme_color": "#f7f7f0",
+  "background_color": "#f7f7f0"
 }

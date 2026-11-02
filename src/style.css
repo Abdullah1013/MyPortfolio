@@ -329,76 +329,24 @@ button:focus {
   color: #cd5ff8;
 }
 
-.founder-badge {
-  padding-left: 50px;
-  margin-top: -20px;
-  position: relative;
-  z-index: 10;
-}
-
-.founder-badge-inner {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(199, 112, 240, 0.08);
+.skill-group {
+  height: 100%;
+  padding: 24px;
+  text-align: left;
   border: 1px solid rgba(199, 112, 240, 0.35);
-  border-radius: 30px;
-  padding: 8px 20px;
-  font-size: 0.95em;
-  color: rgba(255, 255, 255, 0.75);
-  letter-spacing: 0.3px;
-  animation: badge-glow 3s ease-in-out infinite;
-  position: relative;
-  z-index: 10;
-  pointer-events: auto;
-  white-space: nowrap;
+  border-radius: 12px;
+  background: rgba(199, 112, 240, 0.05);
 }
 
-@media (max-width: 768px) {
-  .founder-badge {
-    padding-left: 15px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .founder-badge-inner {
-    font-size: 0.82em;
-    padding: 7px 14px;
-    white-space: normal;
-    text-align: center;
-    justify-content: center;
-  }
+.skill-group h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
 }
 
-.founder-icon {
-  font-size: 1em;
-  animation: zap-pulse 1.5s ease-in-out infinite;
-}
-
-.founder-link {
-  color: #c770f0;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  position: relative;
-  z-index: 10;
-  pointer-events: auto;
-}
-
-.founder-link:hover {
-  color: #e879f9;
-  text-shadow: 0 0 10px rgba(199, 112, 240, 0.6);
-}
-
-@keyframes badge-glow {
-  0%, 100% { box-shadow: 0 0 8px rgba(199, 112, 240, 0.2); border-color: rgba(199, 112, 240, 0.35); }
-  50%       { box-shadow: 0 0 18px rgba(199, 112, 240, 0.45); border-color: rgba(199, 112, 240, 0.65); }
-}
-
-@keyframes zap-pulse {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.3); }
+.skill-group p {
+  margin: 0;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .Typewriter__wrapper {

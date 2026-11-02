@@ -18,7 +18,25 @@ import {
 
 import { TbApi } from "react-icons/tb";
 function Techstack() {
+  const skillGroups = [
+    { title: "AI & Agentic Workflows", skills: "OpenAI API · OpenRouter · RAG · Vector Embeddings · AI Agents · Tool / Function Calling · Prompt Engineering" },
+    { title: "Conversational AI & Automation", skills: "Twilio WhatsApp / SMS · Retell Voice AI · n8n · Workflow Automation" },
+    { title: "Full Stack Development", skills: "JavaScript · TypeScript · Python · React · Next.js · Node.js · NestJS · Express · Tailwind CSS · Bootstrap" },
+    { title: "Data & Real-Time Systems", skills: "PostgreSQL · MySQL · TypeORM · Sequelize · Query Optimization · REST APIs · Socket.io · WebSockets · JWT & RBAC" },
+    { title: "Deployment & Delivery", skills: "Docker · Git · GitHub Actions · CI/CD · Fly.io · Vercel · Netlify · Render · Railway" },
+  ];
   return (
+    <>
+    <Row style={{ justifyContent: "center", paddingBottom: "30px" }}>
+      {skillGroups.map(({ title, skills }) => (
+        <Col xs={12} md={6} key={title} className="mb-3">
+          <div className="skill-group">
+            <h3 className="purple">{title}</h3>
+            <p>{skills}</p>
+          </div>
+        </Col>
+      ))}
+    </Row>
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
@@ -57,6 +75,7 @@ function Techstack() {
         <SiCplusplus />
       </Col>
     </Row>
+    </>
   );
 }
 

@@ -13,8 +13,12 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Abdullah Khan </span>
             from <span className="purple"> Lahore, Pakistan.</span>
             <br />
-            I am a <a href="https://www.pure-syntax.com" target="_blank" rel="noreferrer" className="purple" style={{ fontWeight: "bold", textDecoration: "none" }}>Co-Founder &amp; CTO of PureSyntax</a> and a
-            Full Stack Developer with deep expertise in Web technologies and the MERN stack.
+            I am a <span className="purple">Full Stack &amp; AI Application Developer</span>
+            building production applications with React, Next.js, NestJS, and TypeScript.
+            <br /><br />
+            I develop RAG pipelines, LLM tool-calling workflows, and conversational agents
+            with OpenAI and OpenRouter. My work also includes Twilio WhatsApp automation,
+            Retell voice agents, and multi-step workflows in n8n.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!

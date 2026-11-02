@@ -12,11 +12,10 @@ const experiences = [
     duration: "March 2026 — Present",
     current: true,
     bullets: [
-      "Building scalable backend services using NestJS and TypeScript with modular architecture and dependency injection.",
-      "Designing and implementing RESTful APIs with JWT-based authentication and role-based access control.",
-      "Creating type-safe DTOs and data models using TypeScript interfaces and class-validator for robust request validation.",
-      "Integrating TypeORM with PostgreSQL for structured schema management and efficient relational data querying.",
-      "Applying NestJS interceptors, pipes, and exception filters to enforce consistent API behavior and error handling across services.",
+      "Built a multi-tenant WhatsApp automation platform with Twilio, per-client prompts, memory, and knowledge bases using OpenAI and OpenRouter.",
+      "Implemented RAG pipelines and LLM tool-calling workflows to answer from client-specific data and trigger lookups, bookings, and record updates.",
+      "Built voice AI agents with Retell and orchestrated multi-step automations in n8n, connecting AI workflows to external services.",
+      "Developed NestJS and TypeScript backend services with TypeORM, PostgreSQL, JWT authentication, role-based access, and type-safe DTO validation.",
     ],
   },
   {
@@ -30,6 +29,16 @@ const experiences = [
       "Built a game backend with Socket.io & APIs and a React-based dashboard for managing role-based game stats.",
       "Migrated backend to Fly.io and implemented CI/CD pipelines with GitHub Actions.",
       "Integrated deep linking for referrals and Facebook authentication.",
+    ],
+  },
+  {
+    role: "Software Trainee",
+    company: "Integriti",
+    location: "Lahore, Pakistan",
+    duration: "February 2025 — April 2025",
+    current: false,
+    bullets: [
+      "Built React.js interfaces and Node.js / Express APIs handling authentication and business logic.",
     ],
   },
   {
