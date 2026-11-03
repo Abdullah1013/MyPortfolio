@@ -274,11 +274,36 @@ export default function Portfolio() {
 }
 
 function Portrait({ small = false }) {
+  const surface = useRef(null);
+  const frame = useRef(null);
+  useEffect(() => () => cancelAnimationFrame(frame.current), []);
+  function followPointer(event) {
+    if (event.pointerType !== "mouse" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 2;
+    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 2;
+    cancelAnimationFrame(frame.current);
+    frame.current = requestAnimationFrame(() => {
+      surface.current?.style.setProperty("--portrait-x", `${x * 7}px`);
+      surface.current?.style.setProperty("--portrait-y", `${y * 5}px`);
+    });
+  }
+  function resetPointer() {
+    cancelAnimationFrame(frame.current);
+    surface.current?.style.setProperty("--portrait-x", "0px");
+    surface.current?.style.setProperty("--portrait-y", "0px");
+  }
   return (
-    <div className={`portrait-composition ${small ? "portrait-small" : ""}`}>
+    <div ref={surface} onPointerMove={followPointer} onPointerLeave={resetPointer} className={`portrait-composition ${small ? "portrait-small" : ""}`}>
       <div className="portrait-grid" />
       <div className="portrait-ring ring-one" />
       <div className="portrait-ring ring-two" />
+      <svg className="portrait-orbits" viewBox="0 0 500 440" preserveAspectRatio="none" aria-hidden="true">
+        <path className="orbit-track" pathLength="100" d="M 45 285 C 12 157 150 32 324 42 C 498 52 527 231 405 345 C 283 459 78 413 45 285 Z" />
+        <path className="orbit-tracer" pathLength="100" d="M 45 285 C 12 157 150 32 324 42 C 498 52 527 231 405 345 C 283 459 78 413 45 285 Z" />
+        <path className="orbit-track orbit-track-secondary" pathLength="100" d="M 46 150 C 132 45 457 117 465 269 C 473 421 152 435 64 309 C 29 259 12 192 46 150 Z" />
+        <path className="orbit-tracer orbit-tracer-secondary" pathLength="100" d="M 46 150 C 132 45 457 117 465 269 C 473 421 152 435 64 309 C 29 259 12 192 46 150 Z" />
+      </svg>
       <div className="portrait-circle">
         <img src={portrait} alt="Abdullah Khan" width="500" height="500" />
       </div>

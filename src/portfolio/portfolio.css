@@ -2787,3 +2787,75 @@ main:focus {
   .stack-strip span:not(.stack-caption) { font-size: 13px; }
   .stack-strip span:nth-child(3n + 1) i { display: none; }
 }
+/* An orbital signal around the portrait: light trails, floating notes, gentle depth. */
+.portrait-composition { --portrait-x: 0px; --portrait-y: 0px; }
+.portrait-circle {
+  translate: var(--portrait-x) var(--portrait-y);
+  z-index: 1;
+  transition: translate .45s ease-out;
+  animation: portrait-arrive 1.2s cubic-bezier(.2,.7,.2,1) both;
+}
+.portrait-orbits {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+  translate: calc(var(--portrait-x) * -.45) calc(var(--portrait-y) * -.45);
+  transition: translate .65s ease-out;
+}
+.orbit-track { fill: none; stroke: #85a66c; stroke-width: .6; opacity: .28; }
+.orbit-track-secondary { opacity: .18; }
+.orbit-tracer {
+  fill: none;
+  stroke: #6d9c3c;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: .18 1.4 4 94.42;
+  filter: drop-shadow(0 0 4px #b7e66d);
+  animation: orbit-signal 12s linear infinite;
+}
+.orbit-tracer-secondary { stroke: #a5d453; stroke-width: 2; animation-duration: 17s; animation-direction: reverse; animation-delay: -6s; }
+.floating-label { translate: calc(var(--portrait-x) * -1.4) calc(var(--portrait-y) * -1.4); transition: translate .65s ease-out; }
+.label-code { animation: float-code 6s ease-in-out infinite; }
+.label-ai { animation: float-ai 7s ease-in-out -2s infinite; }
+.label-ai .ai-symbol { animation: star-turn 20s linear infinite; }
+.portrait-plus { animation: portrait-twinkle 5s ease-in-out infinite; }
+.plus-two { animation-delay: -2.5s; }
+@keyframes orbit-signal { to { stroke-dashoffset: -100; } }
+@keyframes float-code { 0%,100% { transform: translateY(0) rotate(-7deg); } 50% { transform: translateY(-9px) rotate(-4deg); } }
+@keyframes float-ai { 0%,100% { transform: translateY(0) rotate(6deg); } 50% { transform: translateY(8px) rotate(3deg); } }
+@keyframes portrait-twinkle { 0%,100% { opacity: .45; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.12); } }
+@keyframes portrait-arrive { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .portrait-circle, .portrait-orbits, .floating-label { translate: none; }
+  .orbit-tracer { display: none; }
+}
+/* Opposite points on one orbit; offset-rotate keeps the card copy upright. */
+@supports (offset-path: ellipse(33% 37% at 50% 50%)) {
+  @media (prefers-reduced-motion: no-preference) {
+    .portrait-composition .floating-label {
+      left: 0;
+      top: 0;
+      right: auto;
+      bottom: auto;
+      width: max-content;
+      offset-path: ellipse(33% 37% at 50% 50%);
+      offset-anchor: center;
+      offset-rotate: 0deg;
+      translate: none;
+      animation: card-orbit 28s linear infinite;
+    }
+    .portrait-composition .label-code { animation-delay: -17.5s; transform: rotate(-5deg); }
+    .portrait-composition .label-ai { animation-delay: -3.5s; transform: rotate(5deg); }
+    @media (max-width: 900px) {
+      .portrait-composition .floating-label { offset-path: ellipse(28% 37% at 50% 50%); }
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .portrait-composition:hover .floating-label { animation-play-state: paused; }
+    }
+  }
+}
+@keyframes card-orbit { from { offset-distance: 0%; } to { offset-distance: 100%; } }
