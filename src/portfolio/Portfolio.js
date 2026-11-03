@@ -19,7 +19,7 @@ import {
   FiZap,
   FiGlobe,
 } from "react-icons/fi";
-import portrait from "../Assets/Profile_pic.png";
+import portrait from "../Assets/profilepic-longhair.png";
 import cv from "../Assets/Abdullah_Khan.pdf";
 import {
   email,
